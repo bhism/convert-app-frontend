@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Convert images to various formats including JPG, PNG, GIF, and more.">
-  <meta name="keywords" content="image converter, convert images, JPG to PNG, PNG to JPG, image conversion">
-  <meta name="author" content="Your Name">
+  <meta name="description" content="Convert images to a single PDF. Upload and organize your images before converting.">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <title>Image to Image Converter</title>
+  <meta name="keywords" content="image to PDF, JPG to PDF, PNG to PDF, convert images to PDF, free PDF converter">
+  <meta name="author" content="Your Name">
+  <title>Image to PDF Converter</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,13 +17,13 @@
       <img src="sv.png" alt="Site Logo" class="logo">
       <h1 class="site-name">Image & PDF Converter</h1>
       <nav class="site-navigation">
-        <a href="index.html">Image to Image  </a>     |
+        <a href="index.html">Image to Image</a> |
         <a href="image-to-pdf.html">Image to PDF</a>
       </nav>
     </div>
   </header>
 
-  <!-- Main Content for Image to Image Converter -->
+  <!-- Main Content for Image to PDF Converter -->
   <main>
     <section class="layout-container">
       <!-- Left Ad Section -->
@@ -36,28 +36,17 @@
 
       <!-- Center Main Content -->
       <div class="content-wrapper">
-        <!-- Image-to-Image Conversion Section -->
+        <!-- Image-to-PDF Conversion Section -->
         <div class="converter">
-          <h2>Convert Images Between Formats</h2>
+          <h2>Create a PDF from Your Images</h2>
           <div class="upload-box">
-            <p>Choose your images</p>
-            <input type="file" id="image-input" multiple accept="image/*">
-            <button id="browse-image-button">Browse Images</button>
+            <p>Choose your images (they will appear in the order you select)</p>
+            <input type="file" id="pdf-input" multiple accept="image/*">
+            <button id="browse-pdf-button">Browse Images</button>
           </div>
 
-          <div id="image-preview" class="image-preview"></div>
-          <p id="image-count"></p>
-
-          <label for="format">Choose output format:</label>
-          <select id="image-format">
-            <option value="jpg">JPG</option>
-            <option value="png">PNG</option>
-            <option value="gif">GIF</option>
-            <option value="webp">WEBP</option>
-            <option value="bmp">BMP</option>
-          </select>
-
-          <button id="convert-image-button">Convert Image</button>
+          <div id="pdf-image-preview" class="image-preview"></div>
+          <button id="convert-pdf-button">Convert to PDF</button>
         </div>
       </div>
 
@@ -72,12 +61,14 @@
   </main>
 
   <footer>
-    <p>&copy; 2024 Image Converter. All rights reserved.</p>
+    <p>&copy; 2024 PDF Converter. All rights reserved.</p>
   </footer>
 
+  <!-- Include jsPDF Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="scripts.js"></script>
   <script>
-    initImageToImage(); // Initialize image-to-image functionality
+    initImageToPDF(); // Initialize image-to-PDF functionality
   </script>
 </body>
 </html>
